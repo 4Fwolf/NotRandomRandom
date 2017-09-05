@@ -13,6 +13,15 @@ namespace NotRandomRandom {
     public partial class Default {
         
         /// <summary>
+        /// hiddenInp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText hiddenInp;
+        
+        /// <summary>
         /// Div3 control.
         /// </summary>
         /// <remarks>
@@ -58,21 +67,48 @@ namespace NotRandomRandom {
         protected global::System.Web.UI.HtmlControls.HtmlInputButton startBtn;
         
         /// <summary>
-        /// Div2 control.
+        /// Div21 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div21;
         
         /// <summary>
-        /// tablenames control.
+        /// postUrl1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTable tablenames;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText postUrl1;
+        
+        /// <summary>
+        /// testDiv1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl testDiv1;
+        
+        /// <summary>
+        /// Div11 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div11;
+        
+        /// <summary>
+        /// startBtn1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputButton startBtn1;
     }
 }
