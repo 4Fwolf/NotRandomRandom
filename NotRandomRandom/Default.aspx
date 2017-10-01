@@ -16,6 +16,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body style="margin: 0px;">
+    <img src="img/background.jpg" style="position:absolute; width: 100%; height: 100%; z-index: -5; opacity: 0.3;" />
+    <div id="cont" class="myDiv">
     <div class="myDiv" style="width: 100%; background: #161616; height: 50px; margin-top: 0px;">
         <div class="myDiv" style="display: inline-block; width: 400px;">
             <ul class="nav nav-tabs" style="width: 400px; border: none !important; padding-top: 8px; margin-left: 10px;">
@@ -47,6 +49,7 @@
             <br />
             <div style="display: inline-block;" class="myDiv" runat="server">
                 <h1 id="Name">[Winner name]</h1>
+                <a id="profLink" href="https://www.instagram.com/nevmyvach/" style="display:none; margin: 10px 0; font-size: 20px;">See profile</a>
                 <input type="button" id="startBtn" value="Start" runat="server" />
                 <input type="button" id="resetBtn" value="Reset" />
             </div>
@@ -71,6 +74,7 @@
             <br />
             <div style="display: inline-block;" class="myDiv" runat="server">
                 <h1 id="Name1">[Winner name]</h1>
+                <a id="profLink1" href="https://www.instagram.com/slyperr/" style="display:none; margin: 10px 0; font-size: 20px;">See profile</a>
                 <input type="button" id="startBtn1" value="Start" runat="server" />
                 <input type="button" id="resetBtn1" value="Reset" />
             </div>
@@ -150,18 +154,21 @@
                     return;
                 }
 
-                $('.loader').ClassyLoader().draw(100);
+                for (i = 1; i <= 25; ++i) {
+                    $('.loader').ClassyLoader().draw(i*4);
+                }
 
                 setTimeout(function () {
 
-                    var names = ["@xpshv", "@noctivagant", "@kadatkin", "@shumel", "@krv.ch"];
+                    var names = ["@nevmyvach"];
 
-                    var nmb = Math.floor(Math.random() * 5);
+                    var nmb = 0;//Math.floor(Math.random() * names.length);
 
                     $("#Name").text(names[nmb]);
                     $("#startBtn").prop("disabled", true);
                     $("#resetBtn").prop("disabled", false);
-                }, 720);
+                    $("#profLink").css("display", "block");
+                }, 3000);
             });
             $("#startBtn1").on('click', function (e) {
                 if ($("#postUrl1").val().length < 18) {
@@ -169,18 +176,21 @@
                     return;
                 }
 
-                $('.loader1').ClassyLoader().draw(100);
+                for (i = 1; i <= 25; ++i) {
+                    $('.loader1').ClassyLoader().draw(i * 4);
+                }
 
                 setTimeout(function () {
 
-                    var names = ["@xpshv", "@noctivagant", "@kadatkin", "@shumel", "@krv.ch"];
+                    var names = ["@slyperr"];
 
-                    var nmb = Math.floor(Math.random() * 5);
+                    var nmb = Math.floor(Math.random() * names.length);
 
                     $("#Name1").text(names[nmb]);
                     $("#startBtn1").prop("disabled", true);
                     $("#resetBtn1").prop("disabled", false);
-                }, 720);
+                    $("#profLink1").css("display", "block");
+                }, 3000);
             });
 
             $("#resetBtn").on('click', function (e) {
@@ -190,6 +200,7 @@
 
                 $("#startBtn").prop("disabled", false);
                 $("#resetBtn").prop("disabled", true);
+                $("#profLink").css("display", "none");
             });
             $("#resetBtn1").on('click', function (e) {
                 $('.loader1').ClassyLoader().setPercent(0);
@@ -198,6 +209,7 @@
 
                 $("#startBtn1").prop("disabled", false);
                 $("#resetBtn1").prop("disabled", true);
+                $("#profLink1").css("display", "none");
             });
 
             $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
@@ -210,5 +222,7 @@
             });
         });
 </script>
+
+        </div>
 </body>
 </html>
